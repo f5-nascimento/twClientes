@@ -1,0 +1,14 @@
+<nav th:fragments="nav" class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" th:href="@{/}">TWCLIENTES</a>
+
+      <form class="d-flex" method="get">
+        <select class="form-select me-2" name="lang">
+          <option disabled>Selecione o idioma</option>
+          <option th:selected="${#locale.toString() == 'pt'}" value="pt">Português</option>
+          <option th:selected="${#locale.toString() == 'en'}" value="en">Inglês</option>
+        </select>
+        <button class="btn btn-outline-success" type="submit">Ok</button>
+      </form>
+    </div>
+</nav>  

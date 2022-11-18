@@ -17,8 +17,9 @@ import org.springframework.web.servlet.ModelAndView;
     //anotação para definir a rota do metodo
     //@RequestMapping(path = "/", method = RequestMethod.GET)
     @GetMapping("/")
-    public String home(){
+    public String home(ModelMap model){
 
+        model.addAttribute("boasVindas","Seja bem vindo ao Sistema de Cadastro de Clientes");
         //retorna a view home
         return "home";
 
